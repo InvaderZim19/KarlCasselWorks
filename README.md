@@ -538,6 +538,10 @@ main.on('click', 'down', function(e) {
 ##### 3. Offline game, untitled. (in Java)
 <pre>
 
+import java.util.*;
+import static java.lang.System.*;
+import java.util.ArrayList;
+
 class Room
 {
 	public ArrayList<String> description;
@@ -744,4 +748,188 @@ class LinkedRoomList
    		return temp;
    	}
 }
+</pre>
+
+UserChoice.java
+<pre>
+import java.util.Scanner;
+import java.util.*;
+import static java.lang.System.*;
+
+class Link{
+
+  public String input;
+  public Link first;
+  public Link next;
+
+	public Link(String j) {
+		 input = j;
+	}
+}
+
+class UserChoice{
+
+	private Link first;
+	private int counter;
+	 
+	public UserChoice() {
+		first = null;
+		counter = 0;
+	}
+	 
+
+	public String readInput() {
+	 	Scanner h = new Scanner (System.in);
+		String j = h.next();
+		if(j.equals("r")){
+			restart();
+		} else if(j.equals("q")){
+		    System.exit(0);
+			//exits program when user types in 'q'
+	    } else if(j.equals("y")){
+	    	// goes into room.java
+		} else if(j.equals("z")){
+		    //go back one Link in room.java
+		} else if(j.equals("a")||j.equals("b")||j.equals("c")||j.equals("d")||j.equals("e")||
+		         j.equals("f")||j.equals("g")||j.equals("h")||j.equals("i")||j.equals("j")||
+				 j.equals("k")||j.equals("l")){
+			create(j);
+		} else{
+		    // print error, in room.java
+		}
+			return j;
+	}
+		
+	public void restart(){
+		while(counter != 0){
+			Link temp = first;
+			first = first.next;
+			counter--;
+		}
+			if(counter == 0){
+			System.out.println("You are at the beginning.");
+			}
+	}
+
+	public void create(String j) {   //*
+	     Link newLink = new Link(j);
+		 newLink.next = first;
+		 first = newLink;
+		 counter++;
+	}
+ }
+</pre>
+
+GameFile.adventure
+<pre>
+r The street
+d You see an old lady who is carrying eight shopping bags and trying to cross the street
+o help the lady out
+t helping the lady
+o ignore the lady
+t ignore
+
+r helping the lady
+d You help the lady cross the street. In thanks she gives you a bundle of oranges
+o eat oranges
+t food poisoning
+o take the oranges
+t school
+o throw the oranges away
+t lady hits you
+
+r ignore
+d You ignore the helpless old woman and she gives you the stink eye. You see a hotdog stand.
+o go to hot dog stand
+t hot dog stand
+o walk past hot dog stand
+t The street
+
+r food poisoning
+d You get food poisoning from the oranges.
+o go to hospital
+t hospital
+
+r hospital
+d At the hospital you are given medicine.
+d But after you take the medicine you get an allergic reaction. Oh what a horrible day! 
+o Perhaps tomorrow will be better.
+t The street
+
+r school
+d You go to school.
+d Your friends see you have oranges and ask for them.
+o give them oranges
+t class
+o eat the oranges in front of them
+t food poisoning
+
+r class
+d You are in class now
+d You get a text from your friends.
+d They all got food poisoning!
+d You got a C (70%) on the midterm you got back, but at least you don't have food poisoning!
+o Perhaps tomorrow will be a great day too! 
+t The street
+
+r lady hits you
+d The lady hits you with her 50 pound bag.
+d "YOU THANKLESS SCAMP!" she croaks.
+d You start to bleed.
+o go home
+t home
+o hospital
+t hospital
+o ignore it
+t walking
+
+r walking
+d You faint and someone calls the ambulance for you.
+d You hope the bill won't be high, but it probably will be.
+o Perhaps tomorrow will be a better day.
+t The street
+
+r home
+d You bandage your head and go to sleep.
+d You wake up in a pool of blood.
+o Maybe tomorrow will be a better day.
+t The street
+
+r hot dog stand
+d You are hungry.
+o buy a hot dog
+t bought hot dog
+o ignore hotdog stand and continue walking
+t The street
+
+r bought hot dog
+d The hot dog looks good.
+d You are about to take a bite when a guy with a baby carriage mows you down and steas your hot dog. 
+d Your knee starts to bleed.
+o go home
+t home
+
+</pre>
+
+Makefile
+<pre>
+JAVASRC    = Game.java UserChoice.java Room.java
+SOURCES    = ${JAVASRC} Makefile
+ALLSOURCES = ${SOURCES}
+MAINCLASS  = Game
+CLASSES    = ${patsubst %.java, %.class, ${JAVASRC}}
+
+all: ${CLASSES}
+
+%.class: %.java
+	javac -Xlint $<
+
+clean:
+	rm -f *.class
+
+test: all
+	java Game demo.adventure
+
+.PHONY: clean all test
+
 </pre>
