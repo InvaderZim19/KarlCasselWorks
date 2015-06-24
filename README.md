@@ -4,7 +4,7 @@
 
 #### Projects
 
-##### 1. function RUBI() (in Javascript and currently in development)
+##### 1. function RUBI() (in the functionRUBI directory)
 
 ##### 2. Monster Track (in JavaScript)
 <pre>
