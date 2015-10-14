@@ -5,7 +5,7 @@
  * Summary: An fitness app that trains you
  * Programmed by Sarah Borland & Karl Cassel
  * Art by Maria Zdorova, Yuna Choe & Aubrey Issacman
- */
+ */ 
 var Accel = require('ui/accel');
 var UI = require('ui');
 var Vector2 = require('vector2');
