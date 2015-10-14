@@ -2,7 +2,7 @@ import java.util.*;
 import static java.lang.System.*;
 import java.util.ArrayList;
 
-class Room
+class Room 
 {
     public ArrayList description;
     public String roomName;
