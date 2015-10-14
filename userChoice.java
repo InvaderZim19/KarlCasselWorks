@@ -3,7 +3,7 @@ import java.util.*;
 import static java.lang.System.*;
 
 class Link{
-
+ 
   public String input;
   public Link first;
   public Link next;
