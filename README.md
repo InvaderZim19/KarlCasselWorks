@@ -4,7 +4,7 @@
 
 #### Projects
 
-##### 1. function RUBI() (in the functionRUBI directory)
+##### 1. function RUBI() [a link](https://github.com/InvaderZim19/functionRUBI)
 
 ##### 2. Monster Track (in JavaScript)
 
