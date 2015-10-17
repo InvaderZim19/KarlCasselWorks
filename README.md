@@ -9,3 +9,5 @@
 ##### 2. [Monster Track](https://github.com/InvaderZim19/ucsc_hack2015)
 
 ##### 3. [Adventure Game](https://github.com/InvaderZim19/adv-enture)
+
+##### 4. [RPG Arduino Game](https://github.com/InvaderZim19/rpg-arduino-adv)
