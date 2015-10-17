@@ -4,8 +4,8 @@
 
 #### Projects
 
-##### 1. function RUBI() [a link](https://github.com/InvaderZim19/functionRUBI)
+##### 1. [function RUBI()](https://github.com/InvaderZim19/functionRUBI)
 
-##### 2. Monster Track (in JavaScript)
+##### 2. [Monster Track](https://github.com/InvaderZim19/ucsc_hack2015)
 
-##### 3. Adventure Game (in Java) with a Makefile (for convinience).
+##### 3. [Adventure Game](https://github.com/InvaderZim19/adv-enture)
