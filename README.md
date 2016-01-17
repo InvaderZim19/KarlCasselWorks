@@ -14,7 +14,7 @@
 
 ##### 5. [A Simple Compiler](https://github.com/InvaderZim19/com-piler)
 
-
+##### 6. [Dijkstra's Shortest Path](https://github.com/InvaderZim19/dijkstras-shortest-path)
 
 ### Thank you.
 
