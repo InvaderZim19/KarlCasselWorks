@@ -16,6 +16,8 @@
 
 ##### 6. [Dijkstra's Shortest Path](https://github.com/InvaderZim19/dijkstras-shortest-path)
 
+##### 7. [UCSC Hack 2016](https://github.com/sborland/hack_ucsc2016)
+
 ### Thank you.
 
 ###### Karl Cassel.
