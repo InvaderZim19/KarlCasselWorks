@@ -9,6 +9,7 @@
 ##### [Mobile App: HLPLS](https://github.com/jillzy/HLPLS)
 
 ### Javascript
+##### [Vermont Data Visualization](https://invaderzim19.github.io/VermontPopulation/)
 ##### [function RUBI()](https://github.com/InvaderZim19/functionRUBI)
 ##### [Monster Track](https://github.com/InvaderZim19/ucsc_hack2015)
 
